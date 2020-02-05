@@ -1,0 +1,74 @@
+$colorFondoHF: #202020;
+$rojoMarvel: #e23636;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  color: white;
+  & header {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    background-color: $colorFondoHF;
+  }
+  & section {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(2, 1fr);
+    & #menuLateral {
+      font-size: 1.5em;
+      background-color: $rojoMarvel;
+      grid-column: 1 / 2;
+      padding: 0.3em;
+      & * {
+        text-align: center;
+      }
+      & #buscador {
+        width: 80%;
+        
+      }
+      & #lBuscador {
+        display: block;
+      }
+    }
+    & #contenidoPadre{
+      background-color: $colorFondoHF;
+      grid-column: 2 / -1;
+    }
+    & #contenido {
+      display: flex;
+      flex-wrap: wrap;
+      & #spinner {
+        transform: scaleX(-1);
+        display: none;
+        width: 150px !important;
+        height: 200px !important;
+      }
+      & .imagen{
+        width: 150px;
+        height: 227.733px;
+      }
+      & .tarjetaHeroe{
+        width: 29%;
+        height: max-content;
+        border: 1px solid red;
+        margin: 0.3em;
+        padding: 0.2em;
+        display: flex;
+      }
+    }
+    & #pagination{
+      display: none;
+    }
+  }
+}
+
+button{
+  color: white;
+  background-color: $rojoMarvel;
+  border: none;
+}
