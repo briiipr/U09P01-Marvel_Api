@@ -52,7 +52,7 @@ function obtenDatos() { // Ambas conexiones con sus eventos
     conexionComics.send()
 }
 
-function gestionaConexion() { // Controla que ambas conexiones sean exitosas y que pasados X segundos (en este caso 5), se interprete como que no hay conexión
+function gestionaConexion() { // Controla que ambas conexiones sean exitosas y que pasados X segundos (en este caso 15 para GitHub Pages), se interprete como que no hay conexión
     if (conexionPersonajes.readyState == 4 && conexionPersonajes.status == 200 & conexionComics.readyState == 4 && conexionComics.status == 200) {
         spinner.style.display = 'none'
         datosPersonajes = JSON.parse(conexionPersonajes.response).data.results
@@ -73,7 +73,7 @@ function gestionaConexion() { // Controla que ambas conexiones sean exitosas y q
                 divContenido.appendChild(hError)
                 seHaEscogidoOpcion = false
             }
-        }, 5000)
+        }, 15000)
     }
 }
 
