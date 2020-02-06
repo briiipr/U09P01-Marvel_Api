@@ -66,7 +66,7 @@ function gestionaConexion() { // Controla que ambas conexiones sean exitosas y q
             if (yaCargado == false) {
                 borraContenidoInterno(divContenido)
                 let imgNotFound = document.createElement('img')
-                imgNotFound.src = '../img/notFound.jpg'
+                imgNotFound.src = 'img/notFound.jpg'
                 divContenido.appendChild(imgNotFound)
                 let hError = document.createElement('h2')
                 hError.innerText = 'Error: No se ha podido conectar con la Api de Marvel :('
@@ -89,7 +89,7 @@ function agregaContenido(tipo) { // Agrega los datos de cada conexión según la
             divContenido.appendChild(divComic)
             let imagenComic = document.createElement('img')
             if (x.thumbnail.path.split('/').pop() === 'image_not_available') {
-                imagenComic.src = '../img/mrX.jpg'
+                imagenComic.src = 'img/mrX.jpg'
             } else {
                 imagenComic.src = x.thumbnail.path + '.' + x.thumbnail.extension
             }
@@ -150,7 +150,7 @@ function agregaContenido(tipo) { // Agrega los datos de cada conexión según la
             divContenido.appendChild(divHeroe)
             let imagenHeroe = document.createElement('img')
             if (x.thumbnail.path.split('/').pop() === 'image_not_available') {
-                imagenHeroe.src = '../img/mrX.jpg'
+                imagenHeroe.src = 'img/mrX.jpg'
             } else {
                 imagenHeroe.src = x.thumbnail.path + '.' + x.thumbnail.extension
             }
